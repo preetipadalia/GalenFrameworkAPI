@@ -1,6 +1,7 @@
-package com.galen.restapi;
+package com.galenwrapper.restapi;
 
 import com.galenframework.reports.model.LayoutReport;
+import com.galenframework.reports.model.LayoutSection;
 import com.galenframework.validation.ValidationResult;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ public class Result {
   int Errors;
   List<String> IncludedTags;
   java.util.Map<String, com.galenframework.reports.model.LayoutObjectDetails> Objects;
+  String ExceptionMessage;
 
   public Result() {}
 }

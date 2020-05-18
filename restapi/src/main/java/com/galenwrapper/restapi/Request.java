@@ -1,5 +1,6 @@
-package com.galen.restapi;
+package com.galenwrapper.restapi;
 
+import java.util.HashMap;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,4 +16,9 @@ public class Request {
   private SectionFilter SectionFilter;
   private String TestTitle;
   private String ReportTitle;
+  private HashMap<String, String> Properties;
+  private String BrowserType;
+  private String DriverPath;
+  public int BrowserHeight;
+  public int BrowserWidth;
 }
