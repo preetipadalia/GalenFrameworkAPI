@@ -8,6 +8,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class TestReportRequest {
-  private List<com.galenframework.reports.model.LayoutReport> LayoutReport;
+  private List<LayoutMap> LayoutReport;
   private String ReportPath;
 }

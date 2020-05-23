@@ -3,6 +3,9 @@ package com.galenwrapper.restapi;
 import com.galenframework.api.Galen;
 import com.galenframework.reports.model.LayoutReport;
 import com.galenwrapper.driverhelper.DriverResolver;
+import com.galenwrapper.restapi.helpers.ReportHelper;
+import com.galenwrapper.restapi.helpers.RequestHelper;
+import com.galenwrapper.restapi.helpers.ResultHelper;
 import java.io.IOException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -65,7 +68,9 @@ public class LayoutApi {
 
   private boolean isReportingEnabled(@RequestBody Request request) {
     return (
-      request.getReportPath() != null && !request.getReportPath().equals("")
+      request.isReportEnabled() &&
+      request.getReportPath() != null &&
+      !request.getReportPath().equals("")
     );
   }
 

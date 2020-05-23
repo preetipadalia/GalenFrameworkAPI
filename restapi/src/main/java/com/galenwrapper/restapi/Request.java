@@ -21,4 +21,5 @@ public class Request {
   private String DriverPath;
   public int BrowserHeight;
   public int BrowserWidth;
+  public boolean ReportEnabled;
 }

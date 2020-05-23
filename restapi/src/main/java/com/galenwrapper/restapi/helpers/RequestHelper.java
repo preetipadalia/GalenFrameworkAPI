@@ -1,11 +1,11 @@
-package com.galenwrapper.restapi;
+package com.galenwrapper.restapi.helpers;
 
 import java.util.HashMap;
 import java.util.Properties;
 
-class RequestHelper {
+public class RequestHelper {
 
-  Properties getPropertiesObject(HashMap<String, String> properties) {
+  public Properties getPropertiesObject(HashMap<String, String> properties) {
     Properties props = new Properties();
     if (properties != null) for (String key : properties.keySet()) {
       props.setProperty(key, properties.get(key));
@@ -13,7 +13,7 @@ class RequestHelper {
     return props;
   }
 
-  com.galenframework.speclang2.pagespec.SectionFilter getSectionFilterObject(
+  public com.galenframework.speclang2.pagespec.SectionFilter getSectionFilterObject(
     com.galenwrapper.restapi.SectionFilter sectionFilter
   ) {
     com.galenframework.speclang2.pagespec.SectionFilter filter = new com.galenframework.speclang2.pagespec.SectionFilter();

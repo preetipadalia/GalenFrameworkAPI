@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthApi {
 
   @GetMapping(value = "/checkHealth")
-  public String CheckLayout() throws IOException {
+  public String CheckHealth() throws IOException {
     try {
       return "I am up";
     } catch (Exception e) {

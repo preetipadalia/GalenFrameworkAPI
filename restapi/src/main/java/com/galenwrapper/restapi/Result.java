@@ -17,6 +17,8 @@ public class Result {
   List<String> IncludedTags;
   java.util.Map<String, com.galenframework.reports.model.LayoutObjectDetails> Objects;
   String ExceptionMessage;
+  String Id;
+  String Title;
 
   public Result() {}
 }

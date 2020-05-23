@@ -1,16 +1,20 @@
-package com.galenwrapper.restapi;
+package com.galenwrapper.restapi.helpers;
 
 import com.galenframework.reports.GalenTestInfo;
 import com.galenframework.reports.HtmlReportBuilder;
 import com.galenframework.reports.model.LayoutReport;
+import com.galenwrapper.restapi.Request;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestBody;
 
-class ReportHelper {
+public class ReportHelper {
 
-  void generateGalenReport(@RequestBody Request request, LayoutReport rep)
+  public void generateGalenReport(
+    @RequestBody Request request,
+    LayoutReport rep
+  )
     throws IOException {
     List<GalenTestInfo> tests = new LinkedList<GalenTestInfo>();
     // Creating an object that will contain the information about the test
